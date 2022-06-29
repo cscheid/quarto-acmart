@@ -29,7 +29,6 @@ contributes:
       template-partials:
         # Add here the partials your format is using
         - "partials/title.tex"
-        - "partials/_custom.tex"
         - "partials/_acmart_preamble.tex"
         - "partials/_acmart_authors.tex"
         - "partials/_acmart_abstract.tex"
