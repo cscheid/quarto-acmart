@@ -1,0 +1,24 @@
+- IMPORTANT:
+  - Learn how to install packages on setup
+    - libertine
+    - newtx
+  - Description field in figure
+  - subtitles
+  - figure out how to control [h] location of tables and figures
+  - indentation of verbatim is wrong
+  - spacing before and after bulleted lists
+  - how to configure author year style?
+  - add warning about colons on bibtex keys
+  - check citation style
+  - how to not use highlight macros, just plain verbatim?
+  - insert content in a particular div? filter
+  - language support
+  - undecorated list?
+- table vs table*
+
+- Rewrite template in Quarto-speak
+
+- filters
+  - acks insertion
+  - appendix
+    - how does changing numbering work in templates?
