@@ -9,6 +9,9 @@ bibliography: sample-base.bib
 
 title: The Name of the Title Is Hope
 
+# if short-title is defined, then it's used
+short-title: Hope
+
 author:
   - name: Ben Trovato
     email: trovato@corporation.com
@@ -73,6 +76,20 @@ author:
 
 # acm-specific metadata
 acm-metadata:
+  # acm preamble information
+  copyright-year: 2018
+  acm-year: 2018
+  copyright: acmcopyright
+  doi: XXXXXXX.XXXXXXX
+  conference-acronym: "Conference acronym 'XX"
+  conference-name: |
+    Make sure to enter the correct
+    conference title from your rights confirmation emai
+  conference-date: June 03--05, 2018
+  conference-location: Woodstock, NY
+  price: "15.00"
+  isbn: 978-1-4503-XXXX-X/18/06
+
   # if present, replaces the list of authors in the page header.
   shortauthors: Trovato et al.
 

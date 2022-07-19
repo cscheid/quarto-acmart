@@ -10,6 +10,6 @@ $-- %%%%%%%%%%%%%%%%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
 $if(title)$
-\title{$title$} $-- TODO: shorttitle optional parameter
+\title$if(short-title)$[$short-title$]$endif${$title$}
 $endif$
 
