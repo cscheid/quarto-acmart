@@ -59,12 +59,10 @@ return {
       description = pandoc.write(pandoc.Pandoc({description}), "latex")
       if quarto.doc.isFormat("latex") then
         local caption = pandoc.write(pandoc.Pandoc({image.caption}), "latex")
-        print("Here")
         local blockStr = "\\begin{figure}\n" ..
           "{\\centering \\includegraphics{" .. image.src .. "}}\n" ..
           "\\caption{" .. caption .. "}\n\\Description{"
           .. description .. "}\n\\end{figure}\n"
-        print(blockStr)
         return {pandoc.RawInline("latex", blockStr)}
       else
         image.attr.attributes["alt"] = description

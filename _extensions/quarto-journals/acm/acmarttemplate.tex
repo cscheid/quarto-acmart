@@ -412,6 +412,24 @@ $endif$
 
 $body$
 
+%% begin pandoc before-bib
+$-- $before-bib.tex()$
+%% end pandoc before-bib
+$-- $if(has-frontmatter)$
+$-- \backmatter
+$-- $endif$
+%% begin pandoc biblio
+$-- $biblio.tex()$
+%% end pandoc biblio
+%% begin pandoc include-after
+$-- $for(include-after)$
+$-- $include-after$
+$-- $endfor$
+%% end pandoc include-after
+%% begin pandoc after-body
+$-- $after-body.tex()$
+%% end pandoc after-body
+
 \end{document}
 \endinput
 %%

@@ -1,17 +1,10 @@
 - IMPORTANT:
-  - \Description field in \begin{figure}
   - undecorated list (\begin{description})
   - figure out how to control [h] location of tables and figures
-  - indentation of verbatim is wrong
-  - appendix
-    - how does changing numbering work in templates?
   - spacing before and after bulleted lists
-  - how to configure author year style?
   - handle subtitles
   - add warning about colons on bibtex keys
-  - check citation style
   - how to not use highlight macros, just plain verbatim?
-  - insert content in a particular div? filter
   - language support
   - equal contribution (build lua authors data structure, etc.)
 - table vs table*
@@ -20,5 +13,3 @@
 
 - filters
   - acks insertion
-  - appendix
-    - how does changing numbering work in templates?
