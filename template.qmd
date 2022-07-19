@@ -643,7 +643,7 @@ the margin:
 * **`marginfigure`**: Place a figure in the margin.
 * **`margintable`**: Place a table in the margin.
 
-::: {#acks}
+::: acks
 To Robert, for the bagels and explaining CMYK and color spaces.
 :::
 

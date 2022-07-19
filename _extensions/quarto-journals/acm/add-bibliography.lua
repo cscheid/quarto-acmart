@@ -75,11 +75,13 @@ return {
 
       -- fix acknowledgments
       replace_node(doc.blocks, function(el)
+        print(el.t)
+        quarto.utils.dump(el)
         return el.t == "Div" and has_class(el, "acks")
       end, function(el)
         local text = pandoc.write(pandoc.Pandoc(el.content), "latex")
         local node = pandoc.RawBlock(
-          "latex", "\\begin{acks}\n" .. text .. "\\end{acks}")
+          "latex", "\\begin{acks}\n" .. text .. "\n\\end{acks}")
         return node        
       end)
 

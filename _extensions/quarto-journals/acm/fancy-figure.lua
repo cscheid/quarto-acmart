@@ -70,27 +70,5 @@ return {
         return image
       end
     end
---    Div = function(div)
---      print("Found a div")
---      if not has_class(div, "figure-with-description") then
---        return div
---      end
---      local description = get_block_with_class(div, "description")
---      local image = get_image(div)
---      if description == nil then
---        return image
---      end
---      local caption = pandoc.write(pandoc.Pandoc({image.caption}), "latex")
---      description = pandoc.write(pandoc.Pandoc({description}), "latex")
---      if quarto.doc.isFormat("latex") then
---        return pandoc.RawBlock("latex",
---          "\\begin{figure}\n" ..
---          "{\\centering \\includegraphics{" .. image.src .. "}}\n" ..
---          "\\caption{" .. caption .. "}\n\\Description{"
---          .. description .. "}\n\\end{figure}\n")
---      elseif quarto.doc.isFormat("html") then
---        return pandoc.RawBlock("html", "<img alt=\"" .. description .. "\" src=\"" .. image.src .. "\"/>")
---      end
---    end
   }
 }
