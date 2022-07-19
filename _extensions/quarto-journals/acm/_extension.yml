@@ -9,6 +9,7 @@ contributes:
         # You can include here Lua filters from your extension format 
         - color-text.lua
         - build-acm-authors.lua
+        - fancy-figure.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua

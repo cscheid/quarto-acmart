@@ -1,3 +1,5 @@
+\documentclass[manuscript,screen,review]{acmart}
+
 $-- % Options for packages loaded elsewhere
 $-- \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 $-- \PassOptionsToPackage{hyphens}{url}
@@ -9,61 +11,7 @@ $-- \PassOptionsToPackage{space}{xeCJK}
 $-- $endif$
 $-- %
 $-- $doc-class.tex()$
-$-- 
-$-- $if(beamer)$
-$-- $if(background-image)$
-$-- \usebackgroundtemplate{%
-$--   \includegraphics[width=\paperwidth]{$background-image$}%
-$-- }
-$-- $endif$
-$-- \usepackage{pgfpages}
-$-- \setbeamertemplate{caption}[numbered]
-$-- \setbeamertemplate{caption label separator}{: }
-$-- \setbeamercolor{caption name}{fg=normal text.fg}
-$-- \beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
-$-- $for(beameroption)$
-$-- \setbeameroption{$beameroption$}
-$-- $endfor$
-$-- % Prevent slide breaks in the middle of a paragraph
-$-- \widowpenalties 1 10000
-$-- \raggedbottom
-$-- $if(section-titles)$
-$-- \setbeamertemplate{part page}{
-$--   \centering
-$--   \begin{beamercolorbox}[sep=16pt,center]{part title}
-$--     \usebeamerfont{part title}\insertpart\par
-$--   \end{beamercolorbox}
-$-- }
-$-- \setbeamertemplate{section page}{
-$--   \centering
-$--   \begin{beamercolorbox}[sep=12pt,center]{part title}
-$--     \usebeamerfont{section title}\insertsection\par
-$--   \end{beamercolorbox}
-$-- }
-$-- \setbeamertemplate{subsection page}{
-$--   \centering
-$--   \begin{beamercolorbox}[sep=8pt,center]{part title}
-$--     \usebeamerfont{subsection title}\insertsubsection\par
-$--   \end{beamercolorbox}
-$-- }
-$-- \AtBeginPart{
-$--   \frame{\partpage}
-$-- }
-$-- \AtBeginSection{
-$--   \ifbibliography
-$--   \else
-$--     \frame{\sectionpage}
-$--   \fi
-$-- }
-$-- \AtBeginSubsection{
-$--   \frame{\subsectionpage}
-$-- }
-$-- $endif$
-$-- $endif$
-$-- $if(beamerarticle)$
-$-- \usepackage{beamerarticle} % needs to be loaded first
-$-- $endif$
-$-- 
+
 $-- \usepackage{amsmath,amssymb}
 $-- $if(fontfamily)$
 $-- \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
@@ -150,45 +98,25 @@ $--   \protected\def ^^^^200c{\zerowidthnonjoiner}
 $-- \fi
 $-- %% End of ZWNJ support
 $-- $endif$
-$-- $if(beamer)$
-$-- $if(theme)$
-$-- \usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
-$-- $endif$
-$-- $if(colortheme)$
-$-- \usecolortheme{$colortheme$}
-$-- $endif$
-$-- $if(fonttheme)$
-$-- \usefonttheme{$fonttheme$}
-$-- $endif$
-$-- $if(mainfont)$
-$-- \usefonttheme{serif} % use mainfont rather than sansfont for slide text
-$-- $endif$
-$-- $if(innertheme)$
-$-- \useinnertheme{$innertheme$}
-$-- $endif$
-$-- $if(outertheme)$
-$-- \useoutertheme{$outertheme$}
-$-- $endif$
-$-- $endif$
 $-- % Use upquote if available, for straight quotes in verbatim environments
-$-- \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-$-- \IfFileExists{microtype.sty}{% use microtype if available
-$--   \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
-$--   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-$-- }{}
-$-- $if(indent)$
-$-- $else$
-$-- \makeatletter
-$-- \@ifundefined{KOMAClassName}{% if non-KOMA class
-$--   \IfFileExists{parskip.sty}{%
-$--     \usepackage{parskip}
-$--   }{% else
-$--     \setlength{\parindent}{0pt}
-$--     \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-$-- }{% if KOMA class
-$--   \KOMAoptions{parskip=half}}
-$-- \makeatother
-$-- $endif$
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+$if(indent)$
+$else$
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+$endif$
 $-- $if(verbatim-in-note)$
 $-- \usepackage{fancyvrb}
 $-- $endif$
@@ -347,7 +275,6 @@ $-- $endfor$
 $-- $after-body.tex()$
 $-- \end{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% This is file `sample-manuscript.tex',
 %% generated with the docstrip utility.
@@ -386,7 +313,6 @@ $-- \end{document}
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
 
-\documentclass[manuscript,screen,review]{acmart}
 
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
@@ -400,7 +326,12 @@ $endif$
 
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 
+%% PANDOC PREAMBLE BEGINS
 $pandoc.tex()$
+%% PANDOC PREAMBLE ENDS
+
+\setlength{\parindent}{10pt}
+\setlength{\parskip}{0pt}
 
 \hypersetup{
 $if(title-meta)$
@@ -476,6 +407,8 @@ $endif$
 %% This command processes the author and affiliation and title
 %% information and builds the first part of the formatted document.
 \maketitle
+
+\setlength{\parskip}{-0.1pt}
 
 $body$
 
